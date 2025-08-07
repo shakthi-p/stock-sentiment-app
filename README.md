@@ -36,12 +36,13 @@ A simple Flask-based web app that predicts **stock market sentiment** (Positive,
 1. **Clone the repo**
 git clone https://github.com/shakthi-p/stock-sentiment-app.git
 
-cd stock-sentiment-app
+   cd stock-sentiment-app
 
-3. **Create virtual environment (optional but recommended)**
-python -m venv venv
+3. **Create virtual environment (optional)**
 
-venv\Scripts\activate  # For Windows
+   python -m venv venv
+
+   venv\Scripts\activate  # For Windows
 
 
 5. **Install dependencies**
