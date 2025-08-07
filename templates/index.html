@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stock Sentiment Predictor</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: normal;
+      }
+
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 6px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        resize: vertical;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .stock-img {
+        display: block;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .result {
+        margin-top: 25px;
+        font-size: 16px;
+        padding: 15px;
+        background-color: #f0f0f0;
+        border-left: 5px solid #007bff;
+      }
+
+      .result p {
+        margin: 0;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Stock Market Sentiment Predictor</h1>
+
+      <img
+        src="https://s31898.pcdn.co/wp-content/uploads/2022/10/AdobeStock_416057612-e1665052015417.jpg"
+        alt="Stock Image"
+        class="stock-img"
+      />
+
+      <form method="POST">
+        <label for="user_input">Enter Tweet or News Headline:</label>
+        <textarea name="user_input" id="user_input" rows="2" required>
+{{ user_input | trim }}</textarea
+        >
+        <button type="submit">Predict Sentiment</button>
+      </form>
+
+      {% if sentiment %}
+      <div class="result">
+        <p>Prediction: {{ sentiment }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
