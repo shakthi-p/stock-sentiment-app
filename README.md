@@ -11,18 +11,25 @@ A simple Flask-based web app that predicts **stock market sentiment** (Positive,
 - `train_model.py` trains the model.
 - Saves the model as `model/sentiment_model.pkl`.
 
-**Project Structure:**
+## Project Structure
 
-1 `dataset/` – Contains the training dataset
-  >`tweet_sentiment.csv` – The CSV file with labeled tweet data
-2 `model/` – Contains the trained machine learning model
-  >`sentiment_model.pkl` – Saved model file
-3`static/` – Folder for static files (e.g., CSS, JavaScript)
-4 `templates/` – Contains HTML templates
-   >`index.html` – Main page of the app
-5 `app.py` – Flask web application script
-6 `train_model.py` – Script to train the sentiment analysis model
-7`requirements.txt` – List of Python dependencies
+1. `dataset/` – Contains the training dataset  
+   ➤ `tweet_sentiment.csv` – The CSV file with labeled tweet data
+
+2. `model/` – Contains the trained machine learning model  
+   ➤ `sentiment_model.pkl` – Saved model file
+
+3. `static/` – Folder for static files (e.g., CSS, JavaScript)
+
+4. `templates/` – Contains HTML templates  
+   ➤ `index.html` – Main page of the app
+
+5. `app.py` – Flask web application script
+
+6. `train_model.py` – Script to train the sentiment analysis model
+
+7. `requirements.txt` – List of Python dependencies
+
 
 #### How to Run Locally
 
