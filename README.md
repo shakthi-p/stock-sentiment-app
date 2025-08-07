@@ -11,42 +11,39 @@ A simple Flask-based web app that predicts **stock market sentiment** (Positive,
 - `train_model.py` trains the model.
 - Saves the model as `model/sentiment_model.pkl`.
 
-#### Project Structure
-stock-sentiment-app/
-│
-├── dataset/                # CSV dataset for training
-│   └── tweet_sentiment.csv
-│
-├── model/                  # Trained model
-│   └── sentiment_model.pkl
-│
-├── static/                 # Static files (CSS, JS if any)
-│
-├── templates/              # HTML Templates
-│   └── index.html
-│
-├── app.py                  # Flask application
-├── train_model.py          # Script to train model
-├── requirements.txt        # Required Python packages
+**Project Structure:**
+
+1 `dataset/` – Contains the training dataset
+  >`tweet_sentiment.csv` – The CSV file with labeled tweet data
+2 `model/` – Contains the trained machine learning model
+  >`sentiment_model.pkl` – Saved model file
+3`static/` – Folder for static files (e.g., CSS, JavaScript)
+4 `templates/` – Contains HTML templates
+   >`index.html` – Main page of the app
+5 `app.py` – Flask web application script
+6 `train_model.py` – Script to train the sentiment analysis model
+7`requirements.txt` – List of Python dependencies
 
 #### How to Run Locally
 
 1. **Clone the repo**
 git clone https://github.com/shakthi-p/stock-sentiment-app.git
+
 cd stock-sentiment-app
 
-2. **Create virtual environment (optional but recommended)**
+3. **Create virtual environment (optional but recommended)**
 python -m venv venv
-venv\Scripts\activate  # For Windows
-source venv/bin/activate  # For Mac/Linux
 
-3. **Install dependencies**
+venv\Scripts\activate  # For Windows
+
+
+5. **Install dependencies**
 pip install -r requirements.txt
 
-4. **Run the app**
+6. **Run the app**
 python app.py
 
-5. **Open in browser**
+7. **Open in browser**
    Go to `http://127.0.0.1:5000`
    
 #### Screenshot
